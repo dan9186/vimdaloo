@@ -52,6 +52,8 @@ set directory=~/.vim/swap// " set a specific dir for swap files to keep them out
 
 " use tabs but let them look like spaces
 set autoindent
+set copyindent
+set smarttab
 set noexpandtab
 set tabstop=3
 set shiftwidth=3
