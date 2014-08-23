@@ -37,3 +37,6 @@
 [submodule "bundle/vim-ansible-yaml"]
 	path = bundle/vim-ansible-yaml
 	url = https://github.com/chase/vim-ansible-yaml
+[submodule "bundle/vim-terraform"]
+	path = bundle/vim-terraform
+	url = https://github.com/L2G/vim-syntax-terraform
