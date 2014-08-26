@@ -11,7 +11,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
 " Airline Line
-let g:airlne_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 set laststatus=2 " always show the statusline
 set encoding=utf-8 " necessary to show unicode glyphs
 set noshowmode " hide the default mode text
@@ -57,3 +57,11 @@ set smarttab
 set noexpandtab
 set tabstop=3
 set shiftwidth=3
+
+" Shortcut keys
+nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+inoremap <C-tab>   <Esc>:tabnext<CR>i
+inoremap <C-t>     <Esc>:tabnew<CR>
