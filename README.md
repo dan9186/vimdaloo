@@ -8,6 +8,9 @@ Start by cloning the repository and all of it's submodules down to the local sys
 
 ```
 git clone --recursive https://github.com/dan9186/Vimderp.git ~/.vim
+cd ~/.vim
+./install.sh
 ```
+Or
 
 Copy the `vimrc` file from `~/.vim/vimrc` to `~/.vimrc`
