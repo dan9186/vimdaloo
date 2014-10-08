@@ -44,6 +44,9 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType c set omnifunc=ccomplete#Complete
 setlocal omnifunc=syntaxcomplete#Complete
 
+" Formatting
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
+
 set mouse=a " enable mouse support
 set ttymouse=xterm2 " for mouse support inside screen
 
