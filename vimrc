@@ -47,6 +47,9 @@ setlocal omnifunc=syntaxcomplete#Complete
 " Formatting
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
+" Disable concealing
+let g:vim_json_syntax_conceal = 0
+
 set mouse=a " enable mouse support
 set ttymouse=xterm2 " for mouse support inside screen
 
