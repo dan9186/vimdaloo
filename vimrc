@@ -47,6 +47,10 @@ setlocal omnifunc=syntaxcomplete#Complete
 " Godef
 let g:godef_split=0
 
+" Tab Completion
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
+
 " Formatting
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
