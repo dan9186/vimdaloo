@@ -43,3 +43,6 @@
 [submodule "bundle/vim-json"]
 	path = bundle/vim-json
 	url = https://github.com/elzr/vim-json
+[submodule "bundle/vim-godef"]
+	path = bundle/vim-godef
+	url = https://github.com/dgryski/vim-godef

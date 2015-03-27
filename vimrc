@@ -44,6 +44,9 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType c set omnifunc=ccomplete#Complete
 setlocal omnifunc=syntaxcomplete#Complete
 
+" Godef
+let g:godef_split=0
+
 " Formatting
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
