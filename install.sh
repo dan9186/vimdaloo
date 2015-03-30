@@ -5,6 +5,7 @@ DEPS=$(ls "$PWD/bundle" | head -n 1)
 if [[ ! -f "$PWD/bundle/$DEPS/.git" ]]; then
 	echo "Dependencies don't exist; you probably forgot to run:"
 	printf "\n\tgit submodule update --init --recursive\n\n"
+	exit 1
 fi
 
 # Check YouCompleteMe for running install.sh
