@@ -45,7 +45,7 @@
 	url = https://github.com/dgryski/vim-godef
 [submodule "bundle/vim-go"]
 	path = bundle/vim-go
-	url = git@github.com:fatih/vim-go
+	url = https://github.com/fatih/vim-go
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
