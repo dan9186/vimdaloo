@@ -54,8 +54,24 @@ let g:ycm_add_preview_to_completeopt = 0
 " Disable concealing
 let g:vim_json_syntax_conceal = 0
 
-set mouse=a " enable mouse support
-set ttymouse=xterm2 " for mouse support inside screen
+" Set mouse enabled as default
+set mouse=a
+set ttymouse=xterm2
+
+" Set key to toggle mouse usage
+nnoremap <F12> :call ToggleMouse()<CR>
+function! ToggleMouse()
+	if &mouse == 'a'
+		set mouse=
+		set ttymouse=
+		echo "Mouse usage disabled"
+	else
+		set mouse=a
+		set ttymouse=xterm2
+		echo "Mouse usage enabled"
+	endif
+endfunction
+
 
 set backupdir=~/.vim/backup// " set a specific dir for backups to keep them out of the working dir
 set directory=~/.vim/swap// " set a specific dir for swap files to keep them out of the working dir
