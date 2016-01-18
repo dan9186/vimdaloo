@@ -88,6 +88,12 @@ set tabstop=3
 set shiftwidth=3
 
 " Shortcut keys
+" Easier Split Navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " Conflicts with plugins, needs to be fixed
 " inoremap <c-space> <c-n>
 " nmap <silent> <C-n> :tabnext<CR>
