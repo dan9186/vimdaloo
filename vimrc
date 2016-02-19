@@ -39,6 +39,7 @@ set foldmethod=indent "zo to open, zc to close
 set foldlevel=99
 
 " Intellisense!
+autocmd FileType * set autoindent copyindent smarttab noexpandtab tabstop=3 shiftwidth=3
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -75,17 +76,8 @@ function! ToggleMouse()
 	endif
 endfunction
 
-
 set backupdir=~/.vim/backup// " set a specific dir for backups to keep them out of the working dir
 set directory=~/.vim/swap// " set a specific dir for swap files to keep them out of the working dir
-
-" use tabs but let them look like spaces
-set autoindent
-set copyindent
-set smarttab
-set noexpandtab
-set tabstop=3
-set shiftwidth=3
 
 " Shortcut keys
 " Easier Split Navigation
