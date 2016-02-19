@@ -50,6 +50,9 @@ autocmd FileType cucumber set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 autocmd FileType ruby set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 setlocal omnifunc=syntaxcomplete#Complete
 
+" Remove all trailing whitespace on write
+autocmd BufWritePre * :%s/\s\+$//e
+
 " Godef
 let g:godef_split=0
 
