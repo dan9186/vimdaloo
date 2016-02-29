@@ -65,7 +65,11 @@ let g:vim_json_syntax_conceal = 0
 
 " Set mouse enabled as default
 set mouse=a
-set ttymouse=xterm2
+if has("mouse_sgr")
+	set ttymouse=sgr
+else
+	set ttymouse=xterm2
+end
 
 " Set key to toggle mouse usage
 nnoremap <F12> :call ToggleMouse()<CR>
