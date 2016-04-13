@@ -7,6 +7,9 @@ set laststatus=2   " always show the statusline
 set encoding=utf-8 " necessary to show unicode glyphs
 set noshowmode     " hide the default mode text
 
+" Fugitive
+nnoremap <C-g><C-b> :Gblame<CR>
+
 " Godef
 let g:godef_split=0
 
