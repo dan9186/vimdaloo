@@ -1,8 +1,16 @@
 " Pathogen
 execute pathogen#infect()
 
+" Airline Line
+let g:airline_powerline_fonts = 1
+set laststatus=2   " always show the statusline
+set encoding=utf-8 " necessary to show unicode glyphs
+set noshowmode     " hide the default mode text
+
+" Godef
+let g:godef_split=0
+
 " NerdTree
-" autocmd vimenter * NERDTree " Always open NERDTree
 autocmd StdinReadPre * let s:std_in=1 " Open NERDTree if no file was specified
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -11,32 +19,25 @@ map <C-n> :NERDTreeToggle<CR>
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
 
-" Uncomment the following to have Vim jump to the last position when reopening a file
-au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
+" YouCompleteMe
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
 
-" Airline Line
-let g:airline_powerline_fonts = 1
-set laststatus=2 " always show the statusline
-set encoding=utf-8 " necessary to show unicode glyphs
-set noshowmode " hide the default mode text
-
-"Theming
+" Theming
 syntax enable
-" set showmode " show what mode we're in
-set number	" turn on line numbers
-set scrolloff=5 " always have some lines of text when scrolling
-set showmatch	" show matching braces and brackets
-set hlsearch	" highlight search results
-set incsearch	" show the first matching result while searching for results
-set history=0	" disable our search history
-set visualbell " don't beep
+"set showmode     " show what mode we're in
+set number       " turn on line numbers
+set scrolloff=5  " always have some lines of text when scrolling
+set showmatch	  " show matching braces and brackets
+set hlsearch	  " highlight search results
+set incsearch	  " show the first matching result while searching for results
+set history=0	  " disable our search history
+set visualbell   " don't beep
 set noerrorbells " don't beep
 set background=dark
 
-" set cakephp's template extension
-au BufNewFile,BufRead *.ctp set filetype=php
-
-set foldmethod=indent "zo to open, zc to close
+" Folding
+set foldmethod=indent " fold based on indents
 set foldlevel=99
 
 " Intellisense!
@@ -51,28 +52,23 @@ autocmd FileType cucumber set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 autocmd FileType ruby set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 setlocal omnifunc=syntaxcomplete#Complete
 
-" Remove all trailing whitespace on write
-autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufNewFile,BufRead *.ctp set filetype=php " set cakephp's template extension
 
-" Godef
-let g:godef_split=0
-
-" Tab Completion
-set completeopt-=preview
-let g:ycm_add_preview_to_completeopt = 0
+" Auto Formatting
+autocmd BufWritePre * :%s/\s\+$//e " Remove all trailing whitespace on write
+autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif " Jump to the last position when reopening a file
 
 " Disable concealing
 let g:vim_json_syntax_conceal = 0
 
-" Set mouse enabled as default
-set mouse=a
+" Mouse
+set mouse=a " Set mouse enabled as default
 if has("mouse_sgr")
 	set ttymouse=sgr
 else
 	set ttymouse=xterm2
 end
 
-" Set key to toggle mouse usage
 nnoremap <F12> :call ToggleMouse()<CR>
 function! ToggleMouse()
 	if &mouse == 'a'
@@ -86,6 +82,7 @@ function! ToggleMouse()
 	endif
 endfunction
 
+" Working Directories
 set backupdir=~/.vim/backup// " set a specific dir for backups to keep them out of the working dir
 set directory=~/.vim/swap// " set a specific dir for swap files to keep them out of the working dir
 
