@@ -2,10 +2,11 @@
 execute pathogen#infect()
 
 " NerdTree
-" autocmd vimenter * NERDTree
-autocmd vimenter * if !argc() | NERDTree | endif
+" autocmd vimenter * NERDTree " Always open NERDTree
+autocmd StdinReadPre * let s:std_in=1 " Open NERDTree if no file was specified
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <C-n> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
