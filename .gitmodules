@@ -25,18 +25,12 @@
 [submodule "bundle/airline"]
 	path = bundle/airline
 	url = https://github.com/bling/vim-airline.git
-[submodule "bundle/vim-twig"]
-	path = bundle/vim-twig
-	url = https://github.com/evidens/vim-twig.git
 [submodule "bundle/colorschemes"]
 	path = bundle/colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
 [submodule "bundle/vim-ansible-yaml"]
 	path = bundle/vim-ansible-yaml
 	url = https://github.com/chase/vim-ansible-yaml
-[submodule "bundle/vim-terraform"]
-	path = bundle/vim-terraform
-	url = https://github.com/L2G/vim-syntax-terraform
 [submodule "bundle/vim-json"]
 	path = bundle/vim-json
 	url = https://github.com/elzr/vim-json
