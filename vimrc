@@ -57,6 +57,11 @@ setlocal omnifunc=syntaxcomplete#Complete
 
 autocmd BufNewFile,BufRead *.ctp set filetype=php " set cakephp's template extension
 
+" Syntastic
+"" Golang
+let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
+let g:syntastic_check_on_open = 1
+
 " Auto Formatting
 autocmd BufWritePre * :%s/\s\+$//e " Remove all trailing whitespace on write
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif " Jump to the last position when reopening a file
