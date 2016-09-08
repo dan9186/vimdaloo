@@ -82,10 +82,12 @@ function! ToggleMouse()
 	if &mouse == 'a'
 		set mouse=
 		set ttymouse=
+		set nonu
 		echo "Mouse usage disabled"
 	else
 		set mouse=a
 		set ttymouse=xterm2
+		set nu
 		echo "Mouse usage enabled"
 	endif
 endfunction
