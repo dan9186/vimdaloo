@@ -55,3 +55,6 @@
 [submodule "bundle/vim-ruby"]
 	path = bundle/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby
+[submodule "bundle/yaml-vim"]
+	path = bundle/yaml-vim
+	url = https://github.com/ingydotnet/yaml-vim.git
