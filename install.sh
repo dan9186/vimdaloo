@@ -13,8 +13,8 @@ fi
 	#$HOME/.vim/bundle/YouCompleteMe/install.sh
 #fi
 
-if [ -e $HOME/.vimrc ]; then
-	mv $HOME/.vimrc $HOME/.vimrc.old && echo "Archiving old vimrc"
-fi
+[ -e "$HOME/.vimrc" -a ! -h "$HOME/.vimrc" ] && mv $HOME/.vimrc $HOME/.vimrc.old && echo "Archiving old vimrc"
 
-cp vimrc $HOME/.vimrc && echo "New vimrc copied"
+if [ ! -e "$HOME/.vimrc" ] || [ "$(ls -l "$HOME/.vimrc" | awk -F"-> " '{print $2}')" != "$HOME/.vim/vimrc" ]; then
+	ln -f -s "$HOME/.vim/vimrc" "$HOME/.vimrc"
+fi
