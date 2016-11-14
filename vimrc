@@ -2,7 +2,10 @@
 execute pathogen#infect()
 
 " Airline Line
-let g:airline_powerline_fonts = 1
+let g:airline_left_sep = "\u2b80"
+let g:airline_left_alt_sep = "\u2b81"
+let g:airline_right_sep = "\u2b82"
+let g:airline_right_alt_sep = "\u2b83"
 set laststatus=2   " always show the statusline
 set encoding=utf-8 " necessary to show unicode glyphs
 set noshowmode     " hide the default mode text
