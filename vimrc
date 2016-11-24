@@ -63,6 +63,7 @@ autocmd BufNewFile,BufRead *.ctp set filetype=php " set cakephp's template exten
 " Syntastic
 "" Golang
 let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
+let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_check_on_open = 1
 
 " Auto Formatting
