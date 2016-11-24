@@ -9,9 +9,7 @@ if [[ ! -f "$PWD/bundle/$DEPS/.git" ]]; then
 fi
 
 # Check YouCompleteMe for running install.sh
-#if [[ ! -f "$PWD/bundle/YouCompleteMe/third_party/ycmd/build.py" ]]; then
-	#$HOME/.vim/bundle/YouCompleteMe/install.sh
-#fi
+$HOME/.vim/bundle/YouCompleteMe/install.py
 
 [ -e "$HOME/.vimrc" -a ! -h "$HOME/.vimrc" ] && mv $HOME/.vimrc $HOME/.vimrc.old && echo "Archiving old vimrc"
 
