@@ -8,10 +8,6 @@ Start by cloning the repository and all of it's submodules down to the local sys
 
 ```
 git clone --recursive https://github.com/dan9186/Vimderp.git ~/.vim
-cd ~/.vim
-cd ~/.vim/YouCompleteMe
-./install.py
-cd ..
 ./install.sh
 ```
 Or
