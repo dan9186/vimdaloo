@@ -56,6 +56,7 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType cucumber set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 autocmd FileType ruby set expandtab tabstop=2 shiftwidth=2 softtabstop=0
+autocmd FileType python set expandtab tabstop=4 shiftwidth=4 softtabstop=0
 setlocal omnifunc=syntaxcomplete#Complete
 
 autocmd BufNewFile,BufRead *.ctp set filetype=php " set cakephp's template extension
