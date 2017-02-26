@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Singular deps check, may want foreach later
-DEPS=$(ls "$PWD/bundle" | head -n 1)
-if [[ ! -f "$PWD/bundle/$DEPS/.git" ]]; then
+DEPS=$(ls "$HOME/.vim/bundle" | head -n 1)
+if [[ ! -f "$HOME/.vim/bundle/$DEPS/.git" ]]; then
 	echo "Dependencies don't exist; you probably forgot to run:"
 	printf "\n\tgit submodule update --init --recursive\n\n"
 	exit 1
