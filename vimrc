@@ -60,6 +60,7 @@ autocmd FileType python set expandtab tabstop=4 shiftwidth=4 softtabstop=0
 setlocal omnifunc=syntaxcomplete#Complete
 
 " File extension to sytanx highlighting
+autocmd BufNewFile,BufRead *.jsx set filetype=javascript
 autocmd BufNewFile,BufRead *.ctp set filetype=php " cakephp template
 autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templates
 
