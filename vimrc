@@ -50,7 +50,7 @@ set foldlevel=99
 autocmd FileType * set autoindent copyindent smarttab noexpandtab tabstop=3 shiftwidth=3
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS expandtab tabstop=4 shiftwidth=4 softtabstop=0
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType c set omnifunc=ccomplete#Complete
@@ -60,7 +60,7 @@ autocmd FileType python set expandtab tabstop=4 shiftwidth=4 softtabstop=0
 setlocal omnifunc=syntaxcomplete#Complete
 
 " File extension to sytanx highlighting
-autocmd BufNewFile,BufRead *.jsx set filetype=javascript
+autocmd BufNewFile,BufRead *.jsx set expandtab tabstop=4 shiftwidth=4 softtabstop=0
 autocmd BufNewFile,BufRead *.ctp set filetype=php " cakephp template
 autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templates
 
