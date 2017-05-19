@@ -22,6 +22,6 @@ This repo depends on the use of the [pathogen](https://github.com/tpope/vim-path
 Git submodules are in use with this repo.  To avoid extra confusion, the recursive flag will download all the submodules when initially checking it out.
 
 ```
-git clone --recrusive https://github.com/dna9186/vimderp.git $HOME/.vim
+git clone --recursive https://github.com/dna9186/vimderp.git $HOME/.vim
 $HOME/.vim/install.sh
 ```
