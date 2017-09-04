@@ -9,7 +9,7 @@ if [[ ! -f "$HOME/.vim/bundle/$DEPS/.git" ]]; then
 fi
 
 # Check YouCompleteMe for running install.sh
-$HOME/.vim/bundle/YouCompleteMe/install.py --all
+$HOME/.vim/bundle/YouCompleteMe/install.py --gocode-completer
 
 [ -e "$HOME/.vimrc" -a ! -h "$HOME/.vimrc" ] && mv $HOME/.vimrc $HOME/.vimrc.old && echo "Archiving old vimrc"
 
