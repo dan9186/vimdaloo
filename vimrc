@@ -16,6 +16,9 @@ nnoremap <C-g><C-b> :Gblame<CR>
 " Godef
 let g:godef_split=0
 
+" Vim-Go
+let g:go_template_autocreate=0
+
 " NerdTree
 autocmd StdinReadPre * let s:std_in=1 " Open NERDTree if no file was specified
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -63,6 +66,13 @@ setlocal omnifunc=syntaxcomplete#Complete
 autocmd BufNewFile,BufRead *.jsx set expandtab tabstop=4 shiftwidth=4 softtabstop=0
 autocmd BufNewFile,BufRead *.ctp set filetype=php " cakephp template
 autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templates
+
+" Templates
+augroup templates
+	autocmd BufNewFile main.go silent! execute '0r $HOME/.vim/templates/main.go'
+	autocmd BufNewFile LICENSE.md silent! execute '0r $HOME/.vim/templates/LICENSE.md'
+	autocmd BufNewFile * %substitute#{{EVAL}}\(.\{-\}\){{END}}#\=eval(submatch(1))#ge
+augroup END
 
 " Syntastic
 "" Golang
