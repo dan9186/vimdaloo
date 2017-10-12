@@ -67,6 +67,9 @@ autocmd BufNewFile,BufRead *.jsx set expandtab tabstop=4 shiftwidth=4 softtabsto
 autocmd BufNewFile,BufRead *.ctp set filetype=php " cakephp template
 autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templates
 
+" Templates
+autocmd BufNewFile main.go 0r ~/.vim/templates/main.go
+
 " Syntastic
 "" Golang
 let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
