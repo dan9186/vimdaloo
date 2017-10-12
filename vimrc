@@ -16,6 +16,9 @@ nnoremap <C-g><C-b> :Gblame<CR>
 " Godef
 let g:godef_split=0
 
+" Vim-Go
+let g:go_template_autocreate=0
+
 " NerdTree
 autocmd StdinReadPre * let s:std_in=1 " Open NERDTree if no file was specified
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
