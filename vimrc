@@ -68,7 +68,11 @@ autocmd BufNewFile,BufRead *.ctp set filetype=php " cakephp template
 autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templates
 
 " Templates
-autocmd BufNewFile main.go 0r ~/.vim/templates/main.go
+augroup templates
+	autocmd BufNewFile main.go silent! execute '0r $HOME/.vim/templates/main.go'
+	autocmd BufNewFile LICENSE.md silent! execute '0r $HOME/.vim/templates/LICENSE.md'
+	autocmd BufNewFile * %substitute#{{EVAL}}\(.\{-\}\){{END}}#\=eval(submatch(1))#ge
+augroup END
 
 " Syntastic
 "" Golang
