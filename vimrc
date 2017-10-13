@@ -98,6 +98,9 @@ end
 nnoremap <F12> :call ToggleMouse()<CR>
 function! ToggleMouse()
 	if &mouse == 'a'
+		:NERDTreeClose
+		:TagbarClose
+		:GitGutterDisable
 		set mouse=
 		set ttymouse=
 		set nonu
@@ -106,6 +109,8 @@ function! ToggleMouse()
 		set mouse=a
 		set ttymouse=xterm2
 		set nu
+		:GitGutterEnable
+		:NERDTree
 		echo "Mouse usage enabled"
 	endif
 endfunction
