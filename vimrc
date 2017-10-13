@@ -88,14 +88,18 @@ end
 nnoremap <F12> :call ToggleMouse()<CR>
 function! ToggleMouse()
 	if &mouse == 'a'
+		:NERDTreeClose
 		set mouse=
 		set ttymouse=
 		set nonu
+		:GitGutterDisable
 		echo "Mouse usage disabled"
 	else
 		set mouse=a
 		set ttymouse=xterm2
 		set nu
+		:GitGutterEnable
+		:NERDTree
 		echo "Mouse usage enabled"
 	endif
 endfunction
