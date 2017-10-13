@@ -69,6 +69,9 @@ autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templat
 
 " Templates
 augroup templates
+	" Cucumbers
+	autocmd BufNewFile *.feature silent! execute '0r $HOME/.vim/templates/cucumber.feature'
+
 	" Golang
 	autocmd BufNewFile main.go silent! execute '0r $HOME/.vim/templates/main.go'
 	autocmd BufNewFile *_test.go silent! execute '0r $HOME/.vim/templates/test.go'
