@@ -69,9 +69,14 @@ autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templat
 
 " Templates
 augroup templates
+	" Golang
 	autocmd BufNewFile main.go silent! execute '0r $HOME/.vim/templates/main.go'
 	autocmd BufNewFile *_test.go silent! execute '0r $HOME/.vim/templates/test.go'
+
+	" General
 	autocmd BufNewFile LICENSE.md silent! execute '0r $HOME/.vim/templates/LICENSE.md'
+
+	" Defines special tags for templetizing
 	autocmd BufNewFile * %substitute#{{VE}}\(.\{-\}\){{\/VE}}#\=eval(submatch(1))#ge
 augroup END
 
