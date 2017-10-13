@@ -72,7 +72,7 @@ augroup templates
 	autocmd BufNewFile main.go silent! execute '0r $HOME/.vim/templates/main.go'
 	autocmd BufNewFile *_test.go silent! execute '0r $HOME/.vim/templates/test.go'
 	autocmd BufNewFile LICENSE.md silent! execute '0r $HOME/.vim/templates/LICENSE.md'
-	autocmd BufNewFile * %substitute#{{EVAL}}\(.\{-\}\){{END}}#\=eval(submatch(1))#ge
+	autocmd BufNewFile * %substitute#{{VE}}\(.\{-\}\){{\/VE}}#\=eval(submatch(1))#ge
 augroup END
 
 " Syntastic
