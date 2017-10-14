@@ -1,4 +1,4 @@
-package main_test
+package %HERE%_test
 
 import (
 	"testing"
@@ -7,7 +7,7 @@ import (
 	. "github.com/onsi/gomega"
 )
 
-func TestHandlers(t *testing.T) {
+func TestFunctionality(t *testing.T) {
 	g := Goblin(t)
 	RegisterFailHandler(func(m string, _ ...int) { g.Fail(m) })
 
