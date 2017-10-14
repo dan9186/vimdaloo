@@ -1,0 +1,13 @@
+language: go
+
+install:
+  - make ci_setup
+
+script:
+  - make dockerize test run
+
+notifications:
+  email: false
+
+services:
+  - docker
