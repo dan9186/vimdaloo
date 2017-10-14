@@ -67,22 +67,6 @@ autocmd BufNewFile,BufRead *.jsx set expandtab tabstop=4 shiftwidth=4 softtabsto
 autocmd BufNewFile,BufRead *.ctp set filetype=php " cakephp template
 autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templates
 
-" Templates
-augroup templates
-	" Cucumbers
-	autocmd BufNewFile *.feature silent! execute '0r $HOME/.vim/templates/cucumber.feature'
-
-	" Golang
-	autocmd BufNewFile main.go silent! execute '0r $HOME/.vim/templates/main.go'
-	autocmd BufNewFile *_test.go silent! execute '0r $HOME/.vim/templates/test.go'
-
-	" General
-	autocmd BufNewFile LICENSE.md silent! execute '0r $HOME/.vim/templates/LICENSE.md'
-
-	" Defines special tags for templetizing
-	autocmd BufNewFile * %substitute#{{VE}}\(.\{-\}\){{\/VE}}#\=eval(submatch(1))#ge
-augroup END
-
 " Syntastic
 "" Golang
 let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
@@ -95,6 +79,10 @@ autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm
 
 " Disable concealing
 let g:vim_json_syntax_conceal = 0
+
+" Templates
+let g:templates_no_builtin_templates = 1
+let g:templates_directory = ['$HOME/.vim/templates']
 
 " Mouse
 set mouse=a " Set mouse enabled as default
