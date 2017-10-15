@@ -21,8 +21,7 @@ let g:go_template_autocreate=0
 let g:go_gocode_unimported_packages = 1
 
 " NerdTree
-autocmd StdinReadPre * let s:std_in=1 " Open NERDTree if no file was specified
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <C-n> :NERDTreeToggle<CR>
 
