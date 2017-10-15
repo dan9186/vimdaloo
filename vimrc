@@ -18,6 +18,7 @@ let g:godef_split=0
 
 " Vim-Go
 let g:go_template_autocreate=0
+let g:go_gocode_unimported_packages = 1
 
 " NerdTree
 autocmd StdinReadPre * let s:std_in=1 " Open NERDTree if no file was specified
