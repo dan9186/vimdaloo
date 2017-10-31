@@ -112,6 +112,20 @@ function! ToggleMouse()
 	endif
 endfunction
 
+" Spellcheck
+set spell
+set spelllang=en_us
+set spellfile=$HOME/.vim/spell/en.utf-8.add
+
+highlight clear SpellBad
+highlight clear SpellCap
+highlight clear SpellRare
+highlight clear SpellLocal
+highlight SpellBad term=standout ctermfg=1 term=undercurl cterm=undercurl
+highlight SpellCap term=undercurl cterm=undercurl
+highlight SpellRare term=undercurl cterm=undercurl
+highlight SpellLocal term=undercurl cterm=undercurl
+
 " Working Directories
 set backupdir=~/.vim/backup// " set a specific dir for backups to keep them out of the working dir
 set directory=~/.vim/swap// " set a specific dir for swap files to keep them out of the working dir
