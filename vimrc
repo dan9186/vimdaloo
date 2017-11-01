@@ -62,7 +62,7 @@ autocmd FileType ruby set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 autocmd FileType python set expandtab tabstop=4 shiftwidth=4 softtabstop=0
 setlocal omnifunc=syntaxcomplete#Complete
 
-" File extension to sytanx highlighting
+" File extension to syntax highlighting
 autocmd BufNewFile,BufRead *.jsx set expandtab tabstop=4 shiftwidth=4 softtabstop=0
 autocmd BufNewFile,BufRead *.ctp set filetype=php " cakephp template
 autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templates
@@ -125,6 +125,9 @@ highlight SpellBad term=standout ctermfg=1 term=undercurl cterm=undercurl
 highlight SpellCap term=undercurl cterm=undercurl
 highlight SpellRare term=undercurl cterm=undercurl
 highlight SpellLocal term=undercurl cterm=undercurl
+
+"autocmd FileType gitcommit set spell " Enable for Git Commit Messages
+"autocmd BufNewFile,BufRead *.md,*.mkd,*.markdown set spell " Enable for markdown files
 
 " Working Directories
 set backupdir=~/.vim/backup// " set a specific dir for backups to keep them out of the working dir
