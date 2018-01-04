@@ -68,10 +68,17 @@ autocmd BufNewFile,BufRead *.ctp set filetype=php " cakephp template
 autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templates
 
 " Syntastic
+let g:syntastic_check_on_open = 1
+
 "" Golang
 let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
+"
+"" Ruby
 let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_check_on_open = 1
+
+"" Javascript
+let g:syntastic_javascript_checkers  = ['eslint']
+let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
 
 " Auto Formatting
 autocmd BufWritePre * :%s/\s\+$//e " Remove all trailing whitespace on write
