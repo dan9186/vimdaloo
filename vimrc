@@ -147,6 +147,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Show a marker for 80th column
+set colorcolumn=80
+highlight ColorColumn ctermbg=DarkGrey guibg=#090909
+
 " Conflicts with plugins, needs to be fixed
 " inoremap <c-space> <c-n>
 " nmap <silent> <C-n> :tabnext<CR>
