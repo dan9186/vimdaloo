@@ -6,7 +6,12 @@ install_prereqs() {
 	local install_cmd=""
 	case $OS in
 		"darwin")
-			install_cmd="brew install -y"
+			hash vim && hash mvim && hash cmake && hash ctags || echo "Dependency for ${OS} is missing" && exit 1
+			brew install -y vim macvim cmake ctags 2>/dev/null
+			;;
+		"linux")
+			hash vim && hash cmake && hash ctags || echo "Dependency for ${OS} is missing" && exit 1
+			hash yum && yum install -y vim macvim cmake ctags 2>/dev/null
 			;;
 		"")
 			echo "OS Name came back blank, can't proceed"
@@ -18,7 +23,6 @@ install_prereqs() {
 			;;
 	esac
 
-	hash vim && hash mvim && hash cmake && hash ctags || ${install_cmd} vim macvim cmake ctags 2>/dev/null
 }
 
 check_git_deps() {
