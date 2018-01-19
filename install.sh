@@ -6,11 +6,11 @@ install_prereqs() {
 	local install_cmd=""
 	case $OS in
 		"darwin")
-			hash vim && hash mvim && hash cmake && hash ctags || echo "Dependency for ${OS} is missing" && exit 1
+			hash vim && hash mvim && hash cmake && hash ctags || ( echo "Dependency for ${OS} is missing" && exit 1 )
 			brew install -y vim macvim cmake ctags 2>/dev/null
 			;;
 		"linux")
-			hash vim && hash cmake && hash ctags || echo "Dependency for ${OS} is missing" && exit 1
+			hash vim && hash cmake && hash ctags || ( echo "Dependency for ${OS} is missing" && exit 1 )
 			hash yum && yum install -y vim macvim cmake ctags 2>/dev/null
 			;;
 		"")
