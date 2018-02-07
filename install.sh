@@ -11,7 +11,7 @@ install_prereqs() {
 			;;
 		"linux")
 			hash vim && hash cmake && hash ctags || ( echo "Dependency for ${OS} is missing" && exit 1 )
-			hash yum && yum install -y vim macvim cmake ctags 2>/dev/null
+			hash yum && yum install -y vim cmake ctags 2>/dev/null
 			;;
 		"")
 			echo "OS Name came back blank, can't proceed"
