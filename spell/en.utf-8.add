@@ -17,3 +17,5 @@ Golang
 unmarshall
 yml
 xml
+Decryptor
+Encryptor
