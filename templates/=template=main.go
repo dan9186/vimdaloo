@@ -7,7 +7,7 @@ import (
 	"os"
 
 	"github.com/gomicro/ledger"
-	. "github.com/gomicro/steward"
+	"github.com/gomicro/steward"
 	"github.com/gorilla/mux"
 	"github.com/kelseyhightower/envconfig"
 	/*
@@ -83,7 +83,7 @@ func configure() {
 	log = ledger.New(os.Stdout, ledger.ParseLevel(config.LogLevel))
 	log.Debug("Logger configured")
 
-	SetStatusResponse(&statusResponse{
+	steward.SetStatusResponse(&statusResponse{
 		Application: appName,
 		Version:     appVersion,
 		BuildTime:   buildTime,
