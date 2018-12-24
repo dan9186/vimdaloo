@@ -12,6 +12,7 @@ import (
 	"github.com/kelseyhightower/envconfig"
 	/*
 		"database/sql"
+		"github.com/gomicro/blockit"
 		_ "github.com/lib/pq"
 	*/)
 
@@ -107,12 +108,12 @@ func configure() {
 		db.SetMaxIdleConns(50)
 		db.SetMaxOpenConns(50)
 
-		err = db.Ping()
-		if err != nil {
-			log.Fatalf("Unable to ping database: %v", err.Error())
-			os.Exit(1)
-		}
+		dbb := dbblocker.New(db)
 		log.Debug("Database connection configured")
+
+		log.Debug("Waiting for dependencies to stablize")
+		<-dbb.Blockit()
+		log.Debug("Dependencies have stablized")
 	*/
 
 	log.Info("Configuration complete")
