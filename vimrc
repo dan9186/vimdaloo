@@ -60,11 +60,12 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType cucumber set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 autocmd FileType ruby set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 autocmd FileType python set expandtab tabstop=4 shiftwidth=4 softtabstop=0
+autocmd FileType sh set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 setlocal omnifunc=syntaxcomplete#Complete
 
 " File extension to syntax highlighting
-autocmd BufNewFile,BufRead *.jsx set expandtab tabstop=4 shiftwidth=4 softtabstop=0
-autocmd BufNewFile,BufRead *.js set expandtab tabstop=4 shiftwidth=4 softtabstop=0
+autocmd BufNewFile,BufRead *.jsx set expandtab tabstop=2 shiftwidth=2 softtabstop=0
+autocmd BufNewFile,BufRead *.js set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 autocmd BufNewFile,BufRead *.ctp set filetype=php " cakephp template
 autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templates
 
