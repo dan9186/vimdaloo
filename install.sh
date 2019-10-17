@@ -1,13 +1,16 @@
 #!/bin/bash
 
+python_cmd="python"
+
 install_prereqs() {
 	local OS=$(uname -s | tr '[:upper:]' '[:lower:]')
 
 	local install_cmd=""
 	case $OS in
 		"darwin")
-			hash vim && hash mvim && hash cmake && hash ctags || ( echo "Dependency for ${OS} is missing" && exit 1 )
-			brew install -y vim macvim cmake ctags 2>/dev/null
+			hash vim && hash mvim && hash cmake && hash ctags && hash python3 || ( echo "Dependency for ${OS} is missing" && exit 1 )
+			brew install vim macvim cmake ctags python3 2>/dev/null
+			python_cmd="python3"
 			;;
 		"linux")
 			hash vim && hash cmake && hash ctags || ( echo "Dependency for ${OS} is missing" && exit 1 )
@@ -42,7 +45,7 @@ configure() {
 configure
 
 
-$HOME/.vim/bundle/YouCompleteMe/install.py --gocode-completer
+$python_cmd $HOME/.vim/bundle/YouCompleteMe/install.py --gocode-completer
 
 [ -e "$HOME/.vimrc" -a ! -h "$HOME/.vimrc" ] && mv $HOME/.vimrc $HOME/.vimrc.old && echo "Archiving old vimrc"
 
