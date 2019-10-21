@@ -80,6 +80,13 @@ let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_javascript_checkers  = ['eslint']
 let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
 
+" CSV
+let g:csv_highlight_column = 'y'
+"hi CSVColumnEven term=bold ctermbg=4 guibg=DarkBlue
+"hi CSVColumnOdd  term=bold ctermbg=5 guibg=DarkMagenta
+"hi CSVColumnHeaderEven term=bold ctermbg=4 guibg=DarkBlue
+"hi CSVColumnHeaderOdd term=bold ctermbg=5 guibg=DarkMagenta
+
 " Auto Formatting
 autocmd BufWritePre * :%s/\s\+$//e " Remove all trailing whitespace on write
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif " Jump to the last position when reopening a file
