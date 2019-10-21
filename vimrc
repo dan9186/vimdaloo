@@ -13,12 +13,10 @@ set noshowmode     " hide the default mode text
 " Fugitive
 nnoremap <C-g><C-b> :Gblame<CR>
 
-" Godef
-let g:godef_split=0
-
-" Vim-Go
+" Go
+let g:godef_split=0 "Do not create new split on jump to definition
 let g:go_template_autocreate=0
-let g:go_gocode_unimported_packages = 1
+let g:go_gocode_unimported_packages = 1 "Do not auto add imports
 
 " NerdTree
 autocmd vimenter * NERDTree
@@ -32,24 +30,11 @@ nmap <F8> :TagbarToggle<CR>
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
 
-" Theming
-syntax enable
-"set showmode     " show what mode we're in
-set number       " turn on line numbers
-set scrolloff=5  " always have some lines of text when scrolling
-set showmatch	  " show matching braces and brackets
-set hlsearch	  " highlight search results
-set incsearch	  " show the first matching result while searching for results
-set history=0	  " disable our search history
-set visualbell   " don't beep
-set noerrorbells " don't beep
-set background=dark
-
 " Folding
 set foldmethod=indent " fold based on indents
 set foldlevel=99
 
-" Intellisense!
+" Filetypes
 autocmd FileType * set autoindent copyindent smarttab noexpandtab tabstop=3 shiftwidth=3
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -70,6 +55,17 @@ autocmd BufNewFile,BufRead *.json set expandtab tabstop=2 shiftwidth=2 softtabst
 autocmd BufNewFile,BufRead *.ctp set filetype=php " cakephp template
 autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templates
 autocmd BufNewFile,BufRead *.csv set filetype=csv
+
+" Theming
+set number       " turn on line numbers
+set scrolloff=5  " always have some lines of text when scrolling
+set showmatch	  " show matching braces and brackets
+set hlsearch	  " highlight search results
+set incsearch	  " show the first matching result while searching for results
+set history=0	  " disable our search history
+set visualbell   " don't beep
+set noerrorbells " don't beep
+set background=dark
 
 " Syntastic
 let g:syntastic_check_on_open = 1
