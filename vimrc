@@ -69,6 +69,7 @@ autocmd BufNewFile,BufRead *.js set expandtab tabstop=2 shiftwidth=2 softtabstop
 autocmd BufNewFile,BufRead *.json set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 autocmd BufNewFile,BufRead *.ctp set filetype=php " cakephp template
 autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templates
+autocmd BufNewFile,BufRead *.csv set filetype=csv
 
 " Syntastic
 let g:syntastic_check_on_open = 1
