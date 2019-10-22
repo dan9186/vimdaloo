@@ -34,6 +34,8 @@ let g:ycm_add_preview_to_completeopt = 0
 set foldmethod=indent " fold based on indents
 set foldlevel=99
 
+syntax on
+
 " Filetypes
 autocmd FileType * set autoindent copyindent smarttab noexpandtab tabstop=3 shiftwidth=3
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
