@@ -138,27 +138,17 @@ highlight SpellCap term=undercurl cterm=undercurl
 highlight SpellRare term=undercurl cterm=undercurl
 highlight SpellLocal term=undercurl cterm=undercurl
 
-"autocmd FileType gitcommit set spell " Enable for Git Commit Messages
-"autocmd BufNewFile,BufRead *.md,*.mkd,*.markdown set spell " Enable for markdown files
-
 " Working Directories
 set backupdir=~/.vim/backup// " set a specific dir for backups to keep them out of the working dir
 set directory=~/.vim/swap// " set a specific dir for swap files to keep them out of the working dir
-
-" Shortcut keys
-" Easier Split Navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
 " Show a marker for 80th column
 set colorcolumn=80
 highlight ColorColumn ctermbg=DarkGrey guibg=#090909
 
-" Conflicts with plugins, needs to be fixed
-" inoremap <c-space> <c-n>
-" nmap <silent> <C-n> :tabnext<CR>
-" nmap <silent> <C-p> :tabprev<CR>
-" imap <silent> <C-n> <esc><C-n>
-" imap <silent> <C-p> <esc><C-p>
+" Shortcut keys
+" Easier Split Navigation
+nnoremap <C-j> <C-W><C-J>
+nnoremap <C-k> <C-W><C-K>
+nnoremap <C-l> <C-W><C-L>
+nnoremap <C-h> <C-W><C-H>
