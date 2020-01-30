@@ -45,7 +45,7 @@ configure() {
 configure
 
 
-$python_cmd $HOME/.vim/bundle/YouCompleteMe/install.py --gocode-completer
+$python_cmd $HOME/.vim/bundle/YouCompleteMe/install.py --gocode-completer --js-completer
 
 [ -e "$HOME/.vimrc" -a ! -h "$HOME/.vimrc" ] && mv $HOME/.vimrc $HOME/.vimrc.old && echo "Archiving old vimrc"
 
