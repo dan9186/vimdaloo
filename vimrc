@@ -27,8 +27,13 @@ set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
 
 " Folding
-set foldmethod=indent " fold based on indents
+set foldmethod=indent
 set foldlevel=99
+
+augroup javascript_folding
+	au!
+	au FileType javascript setlocal foldmethod=syntax
+augroup END
 
 syntax on
 
