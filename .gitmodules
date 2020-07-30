@@ -88,3 +88,9 @@
 [submodule "bundle/tsuquyomi"]
 	path = bundle/tsuquyomi
 	url = https://github.com/Quramy/tsuquyomi.git
+[submodule "bundle/vim-protolint"]
+	path = bundle/vim-protolint
+	url = https://github.com/yoheimuta/vim-protolint.git
+[submodule "bundle/ale"]
+	path = bundle/ale
+	url = https://github.com/dense-analysis/ale.git

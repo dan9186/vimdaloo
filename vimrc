@@ -55,6 +55,7 @@ setlocal omnifunc=syntaxcomplete#Complete
 autocmd BufNewFile,BufRead *.jsx set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 autocmd BufNewFile,BufRead *.js set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 autocmd BufNewFile,BufRead *.json set expandtab tabstop=2 shiftwidth=2 softtabstop=0
+autocmd BufNewFile,BufRead *.proto set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 autocmd BufNewFile,BufRead *.ctp set filetype=php " cakephp template
 autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templates
 "autocmd BufNewFile,BufRead *.csv set filetype=csv
@@ -75,7 +76,18 @@ let g:syntastic_check_on_open = 1
 
 "" Golang
 let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
-"
+
+"" Protobuf
+let g:ale_linters = {
+\	'proto': ['protolint'],
+\}
+
+let g:ale_fixers = {
+\	'proto': ['ale#fixers#protolint#Fix'],
+\}
+
+let g:ale_lint_on_text_changed = 'never'
+
 "" Ruby
 let g:syntastic_ruby_checkers = ['rubocop']
 
