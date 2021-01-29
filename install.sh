@@ -44,8 +44,11 @@ configure() {
 
 configure
 
-
+CWD=$PWD
 $python_cmd $HOME/.vim/bundle/YouCompleteMe/install.py --all
+cd $HOME/.vim/bundle/vimproc.vim
+make
+cd $CWD
 
 [ -e "$HOME/.vimrc" -a ! -h "$HOME/.vimrc" ] && mv $HOME/.vimrc $HOME/.vimrc.old && echo "Archiving old vimrc"
 
