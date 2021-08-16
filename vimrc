@@ -77,7 +77,9 @@ set background=dark
 let g:syntastic_check_on_open = 1
 
 "" Golang
-let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
+let g:syntastic_go_checkers = ['go', 'govet', 'errcheck']
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 "" Protobuf
 let g:ale_linters = {
