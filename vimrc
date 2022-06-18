@@ -77,9 +77,13 @@ set background=dark
 let g:syntastic_check_on_open = 1
 
 "" Golang
-let g:syntastic_go_checkers = ['go', 'govet', 'errcheck']
-let g:go_def_mode='gopls'
-let g:go_info_mode='gopls'
+let g:go_metalinter_command = 'golangci-lint'
+let g:go_metalinter_enabled = ['deadcode', 'errcheck', 'gofmt', 'gosimple', 'govet', 'ineffassign', 'rowserrcheck', 'staticcheck', 'structcheck', 'typecheck', 'unused', 'varcheck']
+let g:syntastic_go_checkers = ['golangci-lint']
+"let g:syntastic_go_golangci_lint_args="--config .golangci.yml"
+
+"let g:go_def_mode='gopls'
+"let g:go_info_mode='gopls'
 
 "" Protobuf
 let g:ale_linters = {
