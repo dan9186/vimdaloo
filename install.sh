@@ -42,16 +42,42 @@ configure() {
 	check_git_deps
 }
 
-configure
+install_ycm() {
+  CWD=$PWD
+  $python_cmd $HOME/.vim/bundle/YouCompleteMe/install.py --all
+  cd $HOME/.vim/bundle/vimproc.vim
+  make
+  cd $CWD
+}
 
-CWD=$PWD
-$python_cmd $HOME/.vim/bundle/YouCompleteMe/install.py --all
-cd $HOME/.vim/bundle/vimproc.vim
-make
-cd $CWD
+archive_old() {
+  [ -e "$HOME/.vimrc" -a ! -h "$HOME/.vimrc" ] && mv $HOME/.vimrc $HOME/.vimrc.old && echo "Archiving old vimrc"
+}
 
-[ -e "$HOME/.vimrc" -a ! -h "$HOME/.vimrc" ] && mv $HOME/.vimrc $HOME/.vimrc.old && echo "Archiving old vimrc"
+symlink() {
+  if [ ! -e "$HOME/.vimrc" ] || [ "$(ls -l "$HOME/.vimrc" | awk -F"-> " '{print $2}')" != "$HOME/.vim/vimrc" ]; then
+    ln -f -s "$HOME/.vim/vimrc" "$HOME/.vimrc"
+  fi
+}
 
-if [ ! -e "$HOME/.vimrc" ] || [ "$(ls -l "$HOME/.vimrc" | awk -F"-> " '{print $2}')" != "$HOME/.vim/vimrc" ]; then
-	ln -f -s "$HOME/.vim/vimrc" "$HOME/.vimrc"
+update() {
+  git submodule foreach git checkout master && git submodule foreach git pull
+  CWD=$PWD
+  cd bundle/YouCompleteMe
+  git submodule update --init --recursive
+  cd $PWD
+  git submodule update --init --recursive
+}
+
+install() {
+  configure
+  install_ycm
+  archive_old
+  symlink
+}
+
+if [ $# -eq 0 ]; then
+  install
+else
+  "$@"
 fi
