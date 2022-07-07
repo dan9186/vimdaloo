@@ -4,6 +4,7 @@ execute pathogen#infect()
 " Airline Line
 set laststatus=2   " always show the statusline
 set encoding=utf-8 " necessary to show unicode glyphs
+let g:airline_powerline_fonts = 1
 set noshowmode     " hide the default mode text
 
 " Fugitive
