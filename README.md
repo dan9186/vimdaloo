@@ -1,4 +1,4 @@
-# Vimderp
+# Vimdaloo
 Easy installation and configuration of Vim to act more like a full blown version of IDEs that everyone loves.
 
 # Installation
