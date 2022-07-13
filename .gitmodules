@@ -94,3 +94,6 @@
 [submodule "bundle/typescript-vim"]
 	path = bundle/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "bundle/vim-buf"]
+	path = bundle/vim-buf
+	url = https://github.com/bufbuild/vim-buf.git

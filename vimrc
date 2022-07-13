@@ -88,13 +88,15 @@ let g:syntastic_go_checkers = ['golangci-lint']
 
 "" Protobuf
 let g:ale_linters = {
-\	'proto': ['protolint'],
+\	'proto': ['buf-lint'],
 \}
 
 let g:ale_fixers = {
 \	'proto': ['ale#fixers#protolint#Fix'],
 \}
 
+"" ALE
+let g:ale_linters_explicit = 1
 let g:ale_lint_on_text_changed = 'never'
 
 "" Ruby
