@@ -5,7 +5,7 @@ Easy installation and configuration of Vim to act more like a full blown version
 Git submodules are in use with this repo.  To avoid extra confusion, the recursive flag will download all the submodules when initially checking it out.
 
 ```
-git clone --recursive https://github.com/dan9186/vimderp.git $HOME/.vim
+git clone --recursive https://github.com/dan9186/vimdaloo.git $HOME/.vim
 $HOME/.vim/run.sh
 ```
 
