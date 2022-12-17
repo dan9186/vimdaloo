@@ -97,3 +97,9 @@
 [submodule "bundle/vim-buf"]
 	path = bundle/vim-buf
 	url = https://github.com/bufbuild/vim-buf.git
+[submodule "bundle/vim-pioo"]
+	path = bundle/vim-pioo
+	url = https://github.com/normen/vim-pio.git
+[submodule "bundle/vim-pio"]
+	path = bundle/vim-pio
+	url = https://github.com/normen/vim-pio.git
