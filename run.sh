@@ -8,8 +8,16 @@ install_prereqs() {
 	local install_cmd=""
 	case $OS in
 		"darwin")
-			hash vim && hash mvim && hash cmake && hash ctags && hash python3 || ( echo "Dependency for ${OS} is missing" && exit 1 )
-			brew install vim macvim cmake ctags python3 2>/dev/null
+      local ARCH=$(uname -m | tr '[:upper:]' '[:lower:]')
+      case $ARCH in
+        "arm64")
+          brew install vim cmake ctags python3 java 2>/dev/null
+        ;;
+        *)
+          brew install vim macvim cmake ctags python3 java 2>/dev/null
+        ;;
+      esac
+
 			python_cmd="python3"
 			;;
 		"linux")
