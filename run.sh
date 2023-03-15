@@ -58,6 +58,14 @@ install_ycm() {
   cd $CWD
 }
 
+install_md_preview() {
+  CWD=$PWD
+  cd $HOME/.vim/bundle/markdown-preview
+  yarn install
+  yarn build
+  cd $CWD
+}
+
 archive_old() {
   [ -e "$HOME/.vimrc" -a ! -h "$HOME/.vimrc" ] && mv $HOME/.vimrc $HOME/.vimrc.old && echo "Archiving old vimrc"
 }
@@ -80,6 +88,7 @@ update() {
 install() {
   configure
   install_ycm
+  install_md_preview
   archive_old
   symlink
 }

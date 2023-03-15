@@ -103,3 +103,9 @@
 [submodule "bundle/vim-pio"]
 	path = bundle/vim-pio
 	url = https://github.com/normen/vim-pio.git
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = https://github.com/preservim/vim-markdown.git
+[submodule "bundle/markdown-preview"]
+	path = bundle/markdown-preview
+	url = https://github.com/iamcco/markdown-preview.nvim.git
