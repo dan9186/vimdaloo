@@ -61,7 +61,6 @@ autocmd BufNewFile,BufRead *.json set expandtab tabstop=2 shiftwidth=2 softtabst
 autocmd BufNewFile,BufRead *.proto set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 autocmd BufNewFile,BufRead *.ctp set filetype=php " cakephp template
 autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templates
-"autocmd BufNewFile,BufRead *.csv set filetype=csv
 
 " Theming
 set number       " turn on line numbers
@@ -112,6 +111,11 @@ let g:csv_highlight_column = 'y'
 "hi CSVColumnOdd  term=bold ctermbg=5 guibg=DarkMagenta
 "hi CSVColumnHeaderEven term=bold ctermbg=4 guibg=DarkBlue
 "hi CSVColumnHeaderOdd term=bold ctermbg=5 guibg=DarkMagenta
+
+" Markdown
+let g:mkdp_refresh_slow = 1
+let g:mkdp_filetypes = ['markdown', 'plantuml']
+nmap <C-s> <Plug>MarkdownPreview
 
 " Auto Formatting
 autocmd BufWritePre * :%s/\s\+$//e " Remove all trailing whitespace on write
