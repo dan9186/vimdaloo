@@ -62,7 +62,6 @@ install_md_preview() {
   CWD=$PWD
   cd $HOME/.vim/bundle/markdown-preview
   yarn install
-  yarn build
   cd $CWD
 }
 
@@ -88,7 +87,7 @@ update() {
 install() {
   configure
   install_ycm
-  install_md_preview
+  #install_md_preview
   archive_old
   symlink
 }
