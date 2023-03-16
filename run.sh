@@ -52,9 +52,7 @@ configure() {
 
 install_ycm() {
   CWD=$PWD
-  $python_cmd $HOME/.vim/bundle/YouCompleteMe/install.py --clang-completer --clangd-completer --cs-completer --go-completer --rust-completer --ts-completer
-  cd $HOME/.vim/bundle/vimproc.vim
-  make
+  $python_cmd $HOME/.vim/bundle/YouCompleteMe/install.py --clang-completer --cs-completer --go-completer --rust-completer --ts-completer
   cd $CWD
 }
 
