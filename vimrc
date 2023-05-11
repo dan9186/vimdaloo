@@ -189,4 +189,5 @@ let g:csv_highlight_column = 'y'
 " Markdown
 let g:mkdp_refresh_slow = 1
 let g:mkdp_filetypes = ['markdown', 'plantuml']
+let g:mkdp_theme = 'light'
 nmap <C-s> <Plug>MarkdownPreview
