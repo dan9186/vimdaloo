@@ -4,24 +4,15 @@
 [submodule "bundle/emmet-vim"]
 	path = bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim
-[submodule "bundle/unite.vim"]
-	path = bundle/unite.vim
-	url = https://github.com/Shougo/unite.vim.git
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/vim-sensible"]
 	path = bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
-[submodule "bundle/vim-surround"]
-	path = bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
 [submodule "bundle/airline"]
 	path = bundle/airline
 	url = https://github.com/bling/vim-airline.git
-[submodule "bundle/vim-ansible-yaml"]
-	path = bundle/vim-ansible-yaml
-	url = https://github.com/chase/vim-ansible-yaml
 [submodule "bundle/vim-json"]
 	path = bundle/vim-json
 	url = https://github.com/elzr/vim-json
@@ -43,33 +34,21 @@
 [submodule "bundle/nerdtree-git-plugin"]
 	path = bundle/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin
-[submodule "bundle/vim-ruby"]
-	path = bundle/vim-ruby
-	url = https://github.com/vim-ruby/vim-ruby
 [submodule "bundle/yaml-vim"]
 	path = bundle/yaml-vim
 	url = https://github.com/ingydotnet/yaml-vim.git
 [submodule "bundle/Dockerfile.vim"]
 	path = bundle/Dockerfile.vim
 	url = https://github.com/ekalinin/Dockerfile.vim.git
-[submodule "bundle/vim-flake8"]
-	path = bundle/vim-flake8
-	url = https://github.com/nvie/vim-flake8.git
 [submodule "bundle/vim-javascript"]
 	path = bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
-[submodule "bundle/vim-template"]
-	path = bundle/vim-template
-	url = https://github.com/aperezdc/vim-template
 [submodule "bundle/vim-abolish"]
 	path = bundle/vim-abolish
 	url = https://github.com/tpope/vim-abolish.git
 [submodule "bundle/vim-terraform"]
 	path = bundle/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
-[submodule "bundle/csv.vim"]
-	path = bundle/csv.vim
-	url = https://github.com/chrisbra/csv.vim
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
@@ -91,12 +70,6 @@
 [submodule "bundle/vim-buf"]
 	path = bundle/vim-buf
 	url = https://github.com/bufbuild/vim-buf.git
-[submodule "bundle/vim-pioo"]
-	path = bundle/vim-pioo
-	url = https://github.com/normen/vim-pio.git
-[submodule "bundle/vim-pio"]
-	path = bundle/vim-pio
-	url = https://github.com/normen/vim-pio.git
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = https://github.com/preservim/vim-markdown.git
@@ -109,6 +82,3 @@
 [submodule "bundle/copilot.vim"]
 	path = bundle/copilot.vim
 	url = https://github.com/github/copilot.vim.git
-[submodule "bundle/pgsql.vim"]
-	path = bundle/pgsql.vim
-	url = https://github.com/lifepillar/pgsql.vim.git
