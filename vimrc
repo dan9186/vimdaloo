@@ -138,7 +138,6 @@ autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templat
 
 " YouCompleteMe
 set completeopt-=preview
-let g:ycm_add_preview_to_completeopt = 0
 
 " Golang
 let g:godef_split=0 "Do not create new split on jump to definition
@@ -155,8 +154,6 @@ let g:ale_fixers = {
 \	'javascript': ['prettier', 'eslint'],
 \}
 let g:ale_virtualtext_cursor = 0
-
-"let g:ale_lint_on_text_changed = 'never'
 
 " Markdown
 let g:mkdp_refresh_slow = 1
