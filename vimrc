@@ -12,10 +12,6 @@ nnoremap <C-k> <C-W><C-K>
 nnoremap <C-l> <C-W><C-L>
 nnoremap <C-h> <C-W><C-H>
 
-" Templates
-let g:templates_no_builtin_templates = 1
-let g:templates_directory = ['$HOME/.vim/templates']
-
 " Mouse
 set mouse=a " Set mouse enabled as default
 if has("mouse_sgr")
@@ -83,9 +79,6 @@ set encoding=utf-8 " necessary to show unicode glyphs
 let g:airline_powerline_fonts = 1
 set noshowmode     " hide the default mode text
 
-" Syntastic
-let g:syntastic_check_on_open = 1
-
 " Disable concealing
 let g:vim_json_syntax_conceal = 0
 
@@ -148,49 +141,25 @@ set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
 
 " Golang
-let g:go_metalinter_command = 'golangci-lint'
-let g:go_metalinter_enabled = ['deadcode', 'errcheck', 'gofmt', 'gosimple', 'govet', 'ineffassign', 'rowserrcheck', 'staticcheck', 'structcheck', 'typecheck', 'unused', 'varcheck']
-let g:syntastic_go_checkers = ['golangci-lint']
-"let g:syntastic_go_golangci_lint_args="--config .golangci.yml"
 let g:godef_split=0 "Do not create new split on jump to definition
 let g:go_template_autocreate=0
-let g:go_gocode_unimported_packages = 1 "Do not auto add imports
-
-"let g:go_def_mode='gopls'
-"let g:go_info_mode='gopls'
-
-" Protobuf
-let g:ale_linters = {
-\	'proto': ['buf-lint'],
-\}
-
-let g:ale_fixers = {
-\	'proto': ['ale#fixers#protolint#Fix'],
-\}
 
 " ALE
 let g:ale_linters_explicit = 1
-let g:ale_lint_on_text_changed = 'never'
+let g:ale_linters = {
+\	'proto': ['buf-lint'],
+\	'go': ['gopls', 'golangci-lint', 'gofmt', 'govet', 'gosimple'],
+\}
+let g:ale_fixers = {
+\	'proto': ['ale#fixers#protolint#Fix'],
+\	'javascript': ['prettier', 'eslint'],
+\}
+let g:ale_virtualtext_cursor = 0
 
-" Ruby
-let g:syntastic_ruby_checkers = ['rubocop']
-
-" Javascript
-let g:syntastic_javascript_checkers  = ['eslint']
-let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
-
-" CSV
-let g:csv_highlight_column = 'y'
-"hi CSVColumnEven term=bold ctermbg=4 guibg=DarkBlue
-"hi CSVColumnOdd  term=bold ctermbg=5 guibg=DarkMagenta
-"hi CSVColumnHeaderEven term=bold ctermbg=4 guibg=DarkBlue
-"hi CSVColumnHeaderOdd term=bold ctermbg=5 guibg=DarkMagenta
+"let g:ale_lint_on_text_changed = 'never'
 
 " Markdown
 let g:mkdp_refresh_slow = 1
 let g:mkdp_filetypes = ['markdown', 'plantuml']
 let g:mkdp_theme = 'light'
 nmap <C-s> <Plug>MarkdownPreview
-
-" Psql
-let g:sql_type_default = 'pgsql'
