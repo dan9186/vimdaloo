@@ -147,13 +147,14 @@ let g:go_template_autocreate=0
 let g:ale_linters_explicit = 1
 let g:ale_linters = {
 \	'proto': ['buf-lint'],
-\	'go': ['gopls', 'golangci-lint', 'gofmt', 'govet', 'gosimple'],
+\	'go': ['gopls', 'golangci-lint', 'govet', 'gosimple'],
 \}
 let g:ale_fixers = {
 \	'proto': ['ale#fixers#protolint#Fix'],
 \	'javascript': ['prettier', 'eslint'],
 \}
 let g:ale_virtualtext_cursor = 0
+let g:ale_go_golangci_lint_package=1
 
 " Markdown
 let g:mkdp_refresh_slow = 1
