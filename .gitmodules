@@ -76,9 +76,6 @@
 [submodule "bundle/markdown-preview"]
 	path = bundle/markdown-preview
 	url = https://github.com/iamcco/markdown-preview.nvim.git
-[submodule "bundle/plantuml-syntax"]
-	path = bundle/plantuml-syntax
-	url = https://github.com/aklt/plantuml-syntax.git
 [submodule "bundle/copilot.vim"]
 	path = bundle/copilot.vim
 	url = https://github.com/github/copilot.vim.git
