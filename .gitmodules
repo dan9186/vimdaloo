@@ -79,3 +79,6 @@
 [submodule "bundle/copilot.vim"]
 	path = bundle/copilot.vim
 	url = https://github.com/github/copilot.vim.git
+[submodule "bundle/d2-vim"]
+	path = bundle/d2-vim
+	url = https://github.com/terrastruct/d2-vim.git
