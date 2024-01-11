@@ -138,6 +138,7 @@ autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templat
 
 " YouCompleteMe
 set completeopt-=preview
+let g:ycm_gopls_binary_path = 'gopls'
 
 " Golang
 let g:godef_split=0 "Do not create new split on jump to definition
