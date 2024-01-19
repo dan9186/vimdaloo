@@ -41,11 +41,7 @@ function! ToggleMouse()
 endfunction
 
 " Spellcheck
-if &diff
-	set spell
-else
-	set nospell
-endif
+set spell
 set spelllang=en_us
 set spellfile=$HOME/.vim/spell/en.utf-8.add
 
