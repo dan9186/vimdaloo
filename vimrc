@@ -54,6 +54,9 @@ highlight SpellCap term=undercurl cterm=undercurl
 highlight SpellRare term=undercurl cterm=undercurl
 highlight SpellLocal term=undercurl cterm=undercurl
 
+" Wrapping
+set nowrap
+
 " Show a marker for 80th column
 set colorcolumn=80
 highlight ColorColumn ctermbg=DarkGrey guibg=#090909
