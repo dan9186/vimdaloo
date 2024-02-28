@@ -67,7 +67,6 @@ set scrolloff=5  " always have some lines of text when scrolling
 set showmatch	  " show matching braces and brackets
 set hlsearch	  " highlight search results
 set incsearch	  " show the first matching result while searching for results
-set history=0	  " disable our search history
 set visualbell   " don't beep
 set noerrorbells " don't beep
 set background=dark
