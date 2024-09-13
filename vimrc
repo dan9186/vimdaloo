@@ -157,6 +157,6 @@ let g:ale_go_golangci_lint_package=1
 
 " Markdown
 let g:mkdp_refresh_slow = 1
-let g:mkdp_filetypes = ['markdown', 'plantuml']
+let g:mkdp_filetypes = ['markdown']
 let g:mkdp_theme = 'light'
 nmap <C-s> <Plug>MarkdownPreview
