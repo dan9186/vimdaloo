@@ -74,7 +74,7 @@ symlink() {
 }
 
 update() {
-  git submodule foreach git checkout master && git submodule foreach git pull
+  git submodule foreach git checkout $(git symbolic-ref refes/remotes/origin/HEAD | cut -d '/' -f4) && git submodule foreach git pull
   CWD=$PWD
   cd bundle/YouCompleteMe
   git submodule update --init --recursive
