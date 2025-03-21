@@ -82,3 +82,6 @@
 [submodule "bundle/d2-vim"]
 	path = bundle/d2-vim
 	url = https://github.com/terrastruct/d2-vim.git
+[submodule "bundle/vim-j5"]
+	path = bundle/vim-j5
+	url = https://github.com/pentops/vim-j5.git
