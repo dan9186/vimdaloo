@@ -139,8 +139,9 @@ set completeopt-=preview
 let g:ycm_gopls_binary_path = 'gopls'
 
 " Golang
-let g:godef_split=0 "Do not create new split on jump to definition
-let g:go_template_autocreate=0
+"let g:godef_split=1 "Do not create new split on jump to definition
+"let g:go_template_autocreate=0
+autocmd FileType go nmap <silent> <Leader>d <Plug>(go-def-split)
 
 " ALE
 let g:ale_linters_explicit = 1
