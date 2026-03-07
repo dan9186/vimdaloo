@@ -119,16 +119,20 @@ syntax on
 
 " Filetypes
 autocmd FileType * set autoindent copyindent smarttab noexpandtab tabstop=3 shiftwidth=3
-"autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-"autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-"autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-"autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-"autocmd FileType c set omnifunc=ccomplete#Complete
+autocmd FileType * setlocal omnifunc=syntaxcomplete#Complete
+autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType c setlocal omnifunc=ccomplete#Complete
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+autocmd FileType python setlocal omnifunc=python3complete#Complete
+autocmd FileType sh setlocal omnifunc=syntaxcomplete#Complete
+autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 autocmd FileType cucumber set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 autocmd FileType ruby set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 autocmd FileType python set expandtab tabstop=4 shiftwidth=4 softtabstop=0
 autocmd FileType sh set expandtab tabstop=2 shiftwidth=2 softtabstop=0
-"setlocal omnifunc=syntaxcomplete#Complete
 
 " File extension to syntax highlighting
 autocmd BufNewFile,BufRead *.js,*.jsx,*.ts,*.tsx set expandtab tabstop=2 shiftwidth=2 softtabstop=0
