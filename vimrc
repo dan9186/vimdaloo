@@ -32,7 +32,11 @@ function! ToggleMouse()
 		echo "Mouse usage disabled"
 	else
 		set mouse=a
-		set ttymouse=xterm2
+		if has("mouse_sgr")
+			set ttymouse=sgr
+		else
+			set ttymouse=xterm2
+		endif
 		set nu
 		:GitGutterEnable
 		:NERDTree
