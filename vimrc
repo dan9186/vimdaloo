@@ -135,25 +135,11 @@ autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templat
 
 " YouCompleteMe
 set completeopt-=preview
-let g:ycm_gopls_binary_path = 'gopls'
+nmap <leader>D <plug>(YCMHover)
 
 " Golang
-"let g:godef_split=1 "Do not create new split on jump to definition
-"let g:go_template_autocreate=0
+let g:ycm_gopls_binary_path = "gopls"
 autocmd FileType go nmap <silent> <Leader>d <Plug>(go-def-split)
-
-" ALE
-let g:ale_linters_explicit = 1
-let g:ale_linters = {
-\	'proto': ['buf-lint'],
-\	'go': ['gopls', 'golangci-lint', 'govet', 'gosimple'],
-\}
-let g:ale_fixers = {
-\	'proto': ['ale#fixers#protolint#Fix'],
-\	'javascript': ['prettier', 'eslint'],
-\}
-let g:ale_virtualtext_cursor = 0
-let g:ale_go_golangci_lint_package=1
 
 " Markdown
 let g:mkdp_refresh_slow = 1
