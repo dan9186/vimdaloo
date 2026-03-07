@@ -114,7 +114,6 @@ syntax on
 
 " Filetypes
 autocmd FileType * set autoindent copyindent smarttab noexpandtab tabstop=3 shiftwidth=3
-"autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 "autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 "autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 "autocmd FileType css set omnifunc=csscomplete#CompleteCSS
