@@ -130,8 +130,7 @@ autocmd FileType sh set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 "setlocal omnifunc=syntaxcomplete#Complete
 
 " File extension to syntax highlighting
-autocmd BufNewFile,BufRead *.js,*.jsx set expandtab tabstop=2 shiftwidth=2 softtabstop=0
-autocmd BufNewFile,BufRead *.ts,*.tsx set expandtab tabstop=2 shiftwidth=2 softtabstop=0
+autocmd BufNewFile,BufRead *.js,*.jsx,*.ts,*.tsx set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 autocmd BufNewFile,BufRead *.json set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 autocmd BufNewFile,BufRead *.proto set expandtab tabstop=2 shiftwidth=2 softtabstop=0
 autocmd BufNewFile,BufRead *.ctp set filetype=php " cakephp template
