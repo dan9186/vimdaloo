@@ -57,7 +57,7 @@ highlight SpellLocal term=undercurl cterm=undercurl
 " Wrapping
 set nowrap
 
-" Show a marker for 80th column
+" Show a marker for 120th column
 set colorcolumn=120
 highlight ColorColumn ctermbg=DarkGrey guibg=#090909
 
