@@ -58,7 +58,7 @@ highlight SpellLocal term=undercurl cterm=undercurl
 set nowrap
 
 " Show a marker for 80th column
-set colorcolumn=80
+set colorcolumn=120
 highlight ColorColumn ctermbg=DarkGrey guibg=#090909
 
 " Theming
