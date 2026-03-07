@@ -1,5 +1,6 @@
 " Pathogen
 execute pathogen#infect()
+filetype plugin on
 
 " Working Directories
 set backupdir=~/.vim/backup// " set a specific dir for backups to keep them out of the working dir
