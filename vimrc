@@ -87,6 +87,7 @@ let g:vim_json_syntax_conceal = 0
 
 " Auto Formatting
 autocmd BufWritePre * :%s/\s\+$//e " Remove all trailing whitespace on write
+autocmd BufWritePre * :%s/\r//e  " Remove all ^M (carriage return) characters on write
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif " Jump to the last position when reopening a file
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.graphql,*.vue,*.html PrettierAsync
