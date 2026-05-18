@@ -88,6 +88,9 @@ set noshowmode     " hide the default mode text
 " Disable concealing
 let g:vim_json_syntax_conceal = 0
 
+" JSON Colors
+autocmd FileType json highlight jsonString ctermfg=White guifg=White
+
 " Auto Formatting
 autocmd BufWritePre * :%s/\s\+$//e " Remove all trailing whitespace on write
 autocmd BufWritePre * :%s/\r//e  " Remove all ^M (carriage return) characters on write
