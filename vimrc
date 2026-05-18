@@ -124,6 +124,11 @@ augroup END
 
 syntax on
 
+" Diff Colors
+highlight DiffAdd    cterm=NONE ctermfg=NONE ctermbg=28
+highlight DiffChange cterm=NONE ctermfg=NONE ctermbg=17
+highlight DiffText   cterm=bold ctermfg=NONE ctermbg=26
+
 " Filetypes
 autocmd FileType * set autoindent copyindent smarttab noexpandtab tabstop=3 shiftwidth=3
 autocmd FileType * setlocal omnifunc=syntaxcomplete#Complete
