@@ -50,6 +50,9 @@ set spell
 set spelllang=en_us
 set spellfile=$HOME/.vim/spell/en.utf-8.add
 
+autocmd OptionSet diff if v:option_new | setlocal nospell | else | setlocal spell | endif
+autocmd BufWinEnter * if &diff | setlocal nospell | endif
+
 highlight clear SpellBad
 highlight clear SpellCap
 highlight clear SpellRare
