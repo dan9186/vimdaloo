@@ -156,10 +156,23 @@ autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templat
 " YouCompleteMe
 set completeopt-=preview
 nmap <leader>D <plug>(YCMHover)
+let g:ycm_goto_buffer_command = 'split'
+
+function! s:CustomizeYcmQuickFixWindow()
+	" Keep YCM reference results compact and open selections in a new split.
+	8wincmd _
+	nnoremap <silent><buffer> <CR> <C-w><CR>
+endfunction
+
+augroup ycm_quickfix_window
+	autocmd!
+	autocmd User YcmQuickFixOpened call s:CustomizeYcmQuickFixWindow()
+augroup END
 
 " Golang
 let g:ycm_gopls_binary_path = "gopls"
 autocmd FileType go nmap <silent> <Leader>d <Plug>(go-def-split)
+autocmd FileType go nnoremap <silent> <Leader>r :YcmCompleter GoToReferences<CR>
 
 " Markdown
 let g:mkdp_refresh_slow = 1
