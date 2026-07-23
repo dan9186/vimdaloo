@@ -156,12 +156,11 @@ autocmd BufNewFile,BufRead *.template set filetype=json " cloudformation templat
 " YouCompleteMe
 set completeopt-=preview
 nmap <leader>D <plug>(YCMHover)
-let g:ycm_goto_buffer_command = 'split'
+let g:ycm_goto_buffer_command = 'same-buffer'
 
 function! s:CustomizeYcmQuickFixWindow()
-	" Keep YCM reference results compact and open selections in a new split.
+	" Keep YCM reference results compact.
 	8wincmd _
-	nnoremap <silent><buffer> <CR> <C-w><CR>
 endfunction
 
 augroup ycm_quickfix_window
