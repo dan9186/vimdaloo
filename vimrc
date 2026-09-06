@@ -91,6 +91,10 @@ let g:vim_json_syntax_conceal = 0
 " JSON Colors
 autocmd FileType json highlight jsonString ctermfg=White guifg=White
 
+" YAML Colors
+autocmd FileType yaml highlight yamlBlockMappingKey ctermfg=Yellow guifg=Yellow
+autocmd FileType yaml highlight yamlFlowMappingKey ctermfg=Yellow guifg=Yellow
+
 " Auto Formatting
 autocmd BufWritePre * :%s/\s\+$//e " Remove all trailing whitespace on write
 autocmd BufWritePre * :%s/\r//e  " Remove all ^M (carriage return) characters on write
